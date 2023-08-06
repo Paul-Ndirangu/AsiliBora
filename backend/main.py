@@ -59,6 +59,9 @@ async def long_memory_prediction():
         'Implement a DocArray schema with 2 fields: image and TorchTensor', 
         remember=llm.remember('DocArray schemas and types')
     )
+    return {
+        "pred": predictions
+    }
 
 # Self code refinement
 @app.post("/code_refinement")
