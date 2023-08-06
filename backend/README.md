@@ -3,8 +3,10 @@
 ## Chatbot API for local languages.
 
 ### Supported Languages
-
-* English
+```
+    * English
 * Swahili
 * Kikuyu (In Progress)
-* Luhya
+* Luhya (In Progress)
+```
+
