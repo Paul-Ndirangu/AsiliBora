@@ -13,15 +13,15 @@ async def learn():
     llm = ThinkGPT(model_name="gpt-3.5-turbo", openai_api_key=os.environ['OPENAI_API_KEY'])
 
     rules = llm.abstract(observations=[
-        "in swahili, I did not eat is \"sikula\"",
-        "I did not work is \"ma sikufanya kazi\"",
-        "I did not go is \"sikuenda\"",
-    ], instruction_hint="output the rule in swahili")
+        "in swahili, I did not eat is \"ndinaria\"",
+        "I did not work is \"ma ndinaruta wera\"",
+        "I did not go is \"ndinathii\"",
+    ], instruction_hint="output the rule in kikuyu")
     llm.memorize(rules)
 
-    llm.memorize("in swahili, I studied is \"nilisoma\"")
+    llm.memorize("in kikuyu, I studied is \"ni ndiranthomire\"")
 
-    task = "translate to Tunisian: I didn't study"
+    task = "translate to Kikuyu: I didn't study"
     pred = llm.predict(task, remember=llm.remember(task))
     
     return {
