@@ -22,7 +22,11 @@ async def learn():
     llm.memorize("in swahili, I studied is \"nilisoma\"")
 
     task = "translate to Tunisian: I didn't study"
-    llm.predict(task, remember=llm.remember(task))
+    pred = llm.predict(task, remember=llm.remember(task))
+    
+    return {
+        "pred": pred,
+    }
 
 
 if __name__ == "__main__":
