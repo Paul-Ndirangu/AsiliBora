@@ -1,10 +1,11 @@
 import os
+import config
 from thinkgpt.llm import ThinkGPT
 from fastapi import FastAPI
 
 app = FastAPI()
 
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = config.api_key
 
 
 @app.post("/learn")
