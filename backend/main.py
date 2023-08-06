@@ -50,7 +50,7 @@ async def replay_expand_memory():
     }
 
 
-# Code refinement
+# Self code refinement
 @app.post("/code_refinement")
 async def code_refinement():
     code_refine = llm.refine(
