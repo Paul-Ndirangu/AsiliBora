@@ -4,7 +4,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "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"
 
 
 @app.post("/learn")
@@ -15,7 +15,7 @@ async def learn():
         "in swahili, I did not eat is \"sikula\"",
         "I did not work is \"ma sikufanya kazi\"",
         "I did not go is \"sikuenda\"",
-    ], instruction_hint="output the rule in french")
+    ], instruction_hint="output the rule in swahili")
     llm.memorize(rules)
 
     llm.memorize("in swahili, I studied is \"nilisoma\"")
