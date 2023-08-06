@@ -6,12 +6,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 os.environ['OPENAI_API_KEY'] = config.api_key
+llm = ThinkGPT(model_name="gpt-3.5-turbo", openai_api_key=os.environ['OPENAI_API_KEY'])
 
-
+# learn a new language
 @app.post("/learn_language")
 async def learn():
-    llm = ThinkGPT(model_name="gpt-3.5-turbo", openai_api_key=os.environ['OPENAI_API_KEY'])
-
     rules = llm.abstract(observations=[
         "in swahili, I did not eat is \"ndinaria\"",
         "I did not work is \"ma ndinaruta wera\"",
@@ -27,6 +26,13 @@ async def learn():
     return {
         "pred": pred,
     }
+
+
+# Summarize Content
+@app.post("/summarize")
+async def summarize():
+    
+
 
 if __name__ == "__main__":
     uvicorn.run(app)
