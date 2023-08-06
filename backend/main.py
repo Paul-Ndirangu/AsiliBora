@@ -27,12 +27,27 @@ async def learn():
         "pred": pred,
     }
 
+@app.post("/replay_expand_memory")
+async def replay_expand_memory():
+    # Load old memory
+    old_memory = [
+        "Klaus Mueller is writing a research paper",
+        "Klaus Mueller enjoys reading a book on gentrification",
+        "Klaus Mueller is conversing with Ayesha Khan about exercising"
+    ]
 
-# Summarize Content
-@app.post("/summarize")
-async def summarize():
-    
+    # Teach the LLM the old memory
+    llm.memorize(old_memory)
 
+    # Induce reflections based on the old memory
+    new_observations = llm.infer(facts=llm.remember())
+    print('new thoughts:')
+    print('\n'.join(new_observations))
+
+    llm.memorize(new_observations)
+    return {
+        "pred": new_observations
+    }
 
 if __name__ == "__main__":
     uvicorn.run(app)
