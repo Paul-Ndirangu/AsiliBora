@@ -49,5 +49,26 @@ async def replay_expand_memory():
         "pred": new_observations
     }
 
+
+# Code refinement
+@app.post("/code_refinement")
+async def code_refinement():
+    code_refine = llm.refine(
+    content="""
+    import re
+        print('hello world')
+            """,
+        critics=[
+            'File "/Users/alaeddine/Library/Application Support/JetBrains/PyCharm2022.3/scratches/scratch_166.py", line 2',
+            "  print('hello world')",
+            'IndentationError: unexpected indent'
+        ],
+        instruction_hint="Fix the code snippet based on the error provided. Only provide the fixed code snippet between `` and nothing else.")
+    
+    return {
+        "code": code_refine
+    }
+
+
 if __name__ == "__main__":
     uvicorn.run(app)
