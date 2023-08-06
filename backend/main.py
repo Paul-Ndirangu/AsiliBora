@@ -8,7 +8,7 @@ app = FastAPI()
 os.environ['OPENAI_API_KEY'] = config.api_key
 
 
-@app.post("/learn")
+@app.post("/learn_language")
 async def learn():
     llm = ThinkGPT(model_name="gpt-3.5-turbo", openai_api_key=os.environ['OPENAI_API_KEY'])
 
@@ -27,7 +27,6 @@ async def learn():
     return {
         "pred": pred,
     }
-
 
 if __name__ == "__main__":
     uvicorn.run(app)
