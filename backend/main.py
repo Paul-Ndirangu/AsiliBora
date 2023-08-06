@@ -2,6 +2,7 @@ import os
 import config
 from thinkgpt.llm import ThinkGPT
 from fastapi import FastAPI
+from examples.knowledge_base import knowledge
 
 app = FastAPI()
 
@@ -49,6 +50,15 @@ async def replay_expand_memory():
         "pred": new_observations
     }
 
+
+# Predicting context from long memory
+@app.post("/long_memory_prediction")
+async def long_memory_prediction():
+    llm.memorize(knowledge)
+    predictions = llm.predict(
+        'Implement a DocArray schema with 2 fields: image and TorchTensor', 
+        remember=llm.remember('DocArray schemas and types')
+    )
 
 # Self code refinement
 @app.post("/code_refinement")
