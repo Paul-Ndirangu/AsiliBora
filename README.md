@@ -40,6 +40,7 @@ To use and contribute to this project, follow the instructions below.
 - Transformers library (Hugging Face)
 - FastAPI
 - Uvicorn
+- Llama V2
 
 ### Installation
 
