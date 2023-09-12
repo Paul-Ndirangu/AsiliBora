@@ -102,7 +102,7 @@ The script will present metrics and performance results on the test dataset.
 
 ## Contributing
 
-We welcome contributions to this project! Whether you want to improve the model, add support for new languages, enhance the FastAPI backend, or update documentation, your help is valuable. To contribute, please follow our [contribution guidelines](CONTRIBUTING.md).
+We welcome contributions to this project! Whether you want to improve the model, add support for new languages, enhance the FastAPI backend, or update documentation, your help is valuable. To contribute, please follow our [contribution guidelines](CONTRIBUTING.md) or email [paulmwaura254@gmail.com](paulmwaura@gmail.com).
 
 ## License
 
