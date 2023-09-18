@@ -1,6 +1,7 @@
 import os
 import config
 from thinkgpt.llm import ThinkGPT
+import uvicorn
 from fastapi import FastAPI
 from examples.knowledge_base import knowledge
 
