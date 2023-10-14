@@ -93,6 +93,8 @@ uvicorn app.main:app --reload
 
 This will start the FastAPI server, and you can make POST requests to the specified endpoints to interact with the LLM model.
 
+Open your web browser [http://localhost:8000](http://localhost:8000)
+
 ## Evaluation
 
 Evaluation of the LLM model is crucial to assess its performance on various tasks and datasets. To evaluate the trained model, run the evaluation script:
