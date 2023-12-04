@@ -38,7 +38,7 @@ To use and contribute to this project, follow the instructions below.
 
 ### Prerequisites
 
-- Python 3.6+
+- Python 3.9+
 - PyTorch
 - Transformers library (Hugging Face)
 - FastAPI
