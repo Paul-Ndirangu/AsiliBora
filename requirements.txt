@@ -16,7 +16,7 @@ greenlet==2.0.2
 idna==3.4
 importlib-metadata==6.8.0
 jina-hubble-sdk==0.39.0
-langchain==0.0.325
+langchain==0.0.329
 markdown-it-py==3.0.0
 marshmallow==3.19.0
 mdurl==0.1.2
