@@ -69,7 +69,7 @@ pip install -r requirements.txt
 
 ## Data Collection
 
-To train the LLM model effectively, we need a diverse and representative dataset of local language texts. If you have a suitable dataset, place it in the `data` directory with appropriate labels. If you'd like to contribute your dataset to this project, please reach out to us via email (provide-email-here) or create an issue in the repository.
+To train the LLM model effectively, we need a diverse and representative dataset of local language texts. If you have a suitable dataset, place it in the `data` directory with appropriate labels. If you'd like to contribute your dataset to this project, please reach out to us via email (paulmwaura254@gmail.com) or create an issue in the repository.
 
 ## Training the LLM Model
 
