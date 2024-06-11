@@ -41,7 +41,7 @@ SQLAlchemy==1.4.49
 tenacity==8.2.2
 thinkgpt @ git+https://github.com/alaeddine-13/thinkgpt.git@59dd7e8a881d7c6cf280c140344a72321bc289d6
 tiktoken==0.3.3
-tqdm==4.65.0
+tqdm==4.66.3
 typing-inspect==0.9.0
 typing_extensions==4.7.1
 urllib3==2.0.7
